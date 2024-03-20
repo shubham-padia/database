@@ -45,6 +45,7 @@ class Key extends Validator
     public function isValid($value): bool
     {
         if (!\is_string($value)) {
+            $this->message = 'Value must be of string datatype.';
             return false;
         }
 

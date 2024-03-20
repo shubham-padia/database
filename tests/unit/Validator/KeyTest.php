@@ -31,6 +31,7 @@ class KeyTest extends TestCase
         $this->assertEquals(false, $this->object->isValid(1.5));
         $this->assertEquals(true, $this->object->isValid('asdas7as9as'));
         $this->assertEquals(true, $this->object->isValid('5f058a8925807'));
+        $this->assertEquals('Value must be of string datatype.', $this->object->getDescription(1.5));
 
         // Don't allow empty string
         $this->assertEquals(false, $this->object->isValid(''));
